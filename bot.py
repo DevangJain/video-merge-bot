@@ -29,19 +29,19 @@ def start_command(message):
    keyboard = telebot.types.InlineKeyboardMarkup()
    keyboard.add(
        telebot.types.InlineKeyboardButton(
-           'Deployed By', url='telegram.me/usmanmughal'
+           'Developer 💻', url='https://t.me/DeVAJe'
        )
    )   
    bot.send_message(
        message.chat.id,
-       'Greetings! Video Merge Bot Here 🤗\n\n' +
-       'To Get Help Press /help',
+       'Hello 🤟 I am Video Merge Bot  🤗\n\n' +
+       'For help press /help',
        reply_markup=keyboard
    )
 
 @bot.message_handler(content_types=['video'])
 def handle_video(message):
-    """Add sent video to user's video list."""
+    """Added sent video to your video list."""
 
     chat_id = message.chat.id
     if chat_id in users_files:
@@ -52,7 +52,7 @@ def handle_video(message):
 
 @bot.message_handler(commands=['merge'])
 def merge(message):
-    """Merge user's videos."""
+    """Merging your videos."""
 
     chat_id = message.chat.id
 
@@ -94,7 +94,7 @@ def help_command(message):
    keyboard = telebot.types.InlineKeyboardMarkup()
    keyboard.add(
        telebot.types.InlineKeyboardButton(
-           'Message The Developer', url='telegram.me/usmanmughal'
+           'Developer 💻', url='https://t.me/DeVAJe'
        )
    )
    bot.send_message(
